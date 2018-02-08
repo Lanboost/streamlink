@@ -49,8 +49,6 @@ class Dplay (Plugin):
         # Get domain name
         self.domain = _url_re.match(self.url).group('domain')
         
-        self.session.set_option("ffmpeg-ffmpeg", "D:/Downloads/ffmpeg.exe")
-        
         if not FFMPEGMuxer.is_usable(self.session):
             print("Need ffmpegmuxer please set path to ffmpeg ")
             return False
